@@ -25,7 +25,7 @@ services:
       - 80:80
       - 443:443
     environment:
-      # APP_FULL_BASE_URL: passport.alex.local
+      # APP_FULL_BASE_URL: passbolt.alex.local
       DATASOURCES_DEFAULT_HOST: db
       DATASOURCES_DEFAULT_USERNAME: passbolt
       DATASOURCES_DEFAULT_PASSWORD: passbolt
