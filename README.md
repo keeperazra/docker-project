@@ -30,3 +30,7 @@ docker exec passbolt_passbolt_1 su -m -c "/var/www/passbolt/bin/cake \
     -r admin" -s /bin/sh www-data
 ```
 * The command should output a weblink, use this weblink in your browser to complete the passbolt setup.
+
+## Demo
+
+https://drive.google.com/file/d/1Nf7lor3z_4R_Kl8ag-ELGKxleQnh_uf8/view?usp=sharing
