@@ -18,7 +18,7 @@ The web interface allows you to easily view all of the passwords you have saved,
 
 * CD to the directory you downloaded the docker-project, and make whatever changes you want to the docker-compose.yml
     * Recommend uncommenting `APP_FULL_BASE_URL`, and setting this value to the fully qualified domain name of your docker host, but this is optional
-* Run `docker-compose up`. I recommend running this first without `-d` in order to check for any errors easily. Later you will want to run it as `docker-compose up -d` to set the docker images to run in the background.
+* Run `docker-compose up`. I recommend running this first without `-d` in order to check for any errors easily. Later you will want to run it as `docker-compose up -d` to set the docker containers to run in the background.
 * Visit your docker host in a web browser (for our case, this is `http://docker01-alex.alex.local`), be sure to use the fully qualified domain name, as without the FQDN, the setup **will fail**.
 * Run:
 ```sh
