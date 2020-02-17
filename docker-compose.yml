@@ -4,8 +4,6 @@ services:
     image: mariadb:10.3
     volumes:
       - database_volume:/var/lib/mysql
-    ports:
-      - "127.0.0.1:3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: unsecurepassword
       MYSQL_DATABASE: passbolt
@@ -27,13 +25,13 @@ services:
       - 80:80
       - 443:443
     environment:
-      APP_FULL_BASE_URL: passport.alex.local
+      # APP_FULL_BASE_URL: passport.alex.local
       DATASOURCES_DEFAULT_HOST: db
-      DATASOURCES_DEFAULT_USERAME: passbolt
+      DATASOURCES_DEFAULT_USERNAME: passbolt
       DATASOURCES_DEFAULT_PASSWORD: passbolt
       DATASOURCES_DEFAULT_DATABASE: passbolt
       DATASOURCES_DEFAULT_PORT: 3306
-      PASSBOLT_REGISTRATION_PUBLIC: true
+      PASSBOLT_REGISTRATION_PUBLIC: 1
 
 volumes:
   database_volume:
