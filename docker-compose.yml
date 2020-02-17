@@ -2,20 +2,21 @@ version: '3.4'
 services:
   db:
     image: mariadb:10.3
-    env_file:
-      - env/mysql.env
     volumes:
       - database_volume:/var/lib/mysql
     ports:
       - "127.0.0.1:3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: unsecurepassword
+      MYSQL_DATABASE: passbolt
+      MYSQL_USER: passbolt
+      MYSQL_PASSWORD: passbolt
 
   passbolt:
     image: passbolt/passbolt:2.12.0-debian
     tty: true
     depends_on:
       - db
-    env_file:
-      - env/passbolt.env
     volumes:
       - gpg_volume:/var/www/passbolt/config/gpg
       - images_volume:/var/www/passbolt/webroot/img/public
@@ -25,6 +26,14 @@ services:
     ports:
       - 80:80
       - 443:443
+    environment:
+      APP_FULL_BASE_URL: passport.alex.local
+      DATASOURCES_DEFAULT_HOST: db
+      DATASOURCES_DEFAULT_USERAME: passbolt
+      DATASOURCES_DEFAULT_PASSWORD: passbolt
+      DATASOURCES_DEFAULT_DATABASE: passbolt
+      DATASOURCES_DEFAULT_PORT: 3306
+      PASSBOLT_REGISTRATION_PUBLIC: true
 
 volumes:
   database_volume:
