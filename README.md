@@ -10,9 +10,9 @@ This uses a lightly customized [docker-compose.yml](https://github.com/keeperazr
 
 ## Passbolt
 
-Passbolt is a password managing service that uses two components. The first is a webserver that you can either use an existing one, or host your own. The other component is an extension for your browser that allows you to access and use your stored passwords without needing to go back to your passbolt website every time you want to access anything..
+Passbolt is a password managing service that uses two components. The first is a webserver where you can either use an existing one, or host your own. The other component is an extension for your browser that allows you to access and use your stored passwords without needing to go back to your passbolt website every time you want to access anything.
 
-The web interface allows you to easily view all of the passwords you have saved, as well as edit them all. This can be done using the plugin, but does require clicking through a few more menus. The plugin is best for saving new passwords, as well as then inputing those passwords when you return to that site.
+The web interface allows you to easily view all of the passwords you have saved, as well as edit them all. This can be done using the plugin, but does require clicking through a few more menus. The plugin is best for saving new passwords, as well as then inputting those passwords when you return to that site.
 
 ## Setup
 
